@@ -30,6 +30,7 @@ namespace FindText
 
             if (openFile.ShowDialog().HasValue)
             {
+                if (string.IsNullOrEmpty(openFile.FileName)) return;
                 var xamlFile = openFile.OpenFile() as FileStream;
                 if (xamlFile == null) return;
                 FlowDocument content = null;

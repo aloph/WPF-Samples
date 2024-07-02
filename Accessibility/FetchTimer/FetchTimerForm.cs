@@ -98,7 +98,7 @@ namespace FetchTimer
             var threadDelegate = new ThreadStart(StartWorkerThread);
             _workerThread = new Thread(threadDelegate) {Priority = ThreadPriority.Highest};
             _workerThread.Start();
-            OutputResults("Wait..." + Environment.NewLine);
+           // OutputResults("Wait..." + Environment.NewLine);
         }
 
         /// <summary>
